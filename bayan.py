@@ -73,8 +73,8 @@ def train(steps):
             save()
     save()
 
-if len(sys.argv) > 1 and sys.argv[1] == 'chat':
+if __name__ == '__main__' and len(sys.argv) > 1 and sys.argv[1] == 'chat':
     while True:
         print('بيان:', reply(input('انت: ')))
-else:
+elif __name__ == '__main__':
     train(int(sys.argv[2]) if len(sys.argv) > 2 else 6000)
